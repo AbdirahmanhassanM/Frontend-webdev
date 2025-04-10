@@ -1,4 +1,5 @@
 import { authAPI, quizAPI } from './api-client';
+import './test-connection';
 
 // Simple quiz application using vanilla JavaScript
 document.addEventListener('DOMContentLoaded', () => {
