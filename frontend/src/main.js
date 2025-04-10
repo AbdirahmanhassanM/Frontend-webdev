@@ -161,3 +161,28 @@ document.addEventListener('DOMContentLoaded', () => {
     feedbackText.textContent = feedback;
   }
 });
+
+// Function to get the token from localStorage
+function getToken() {
+  return localStorage.getItem('token');
+}
+
+// Example of including the token in a request
+async function fetchProtectedData() {
+  const token = getToken();
+  try {
+    const response = await fetch(`${API_URL}/protected-endpoint`, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      }
+    });
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error fetching protected data:', error);
+  }
+}
+
+// Call the function to test
+fetchProtectedData();
