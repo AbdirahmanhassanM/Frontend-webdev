@@ -1,0 +1,13 @@
+{
+  "name": "are-you-dumb-quiz",
+  "version": "0.1.0",
+  "description": "A fun quiz application to test if you're dumb",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "preview": "cd frontend && npm run preview",
+    "start": "cd frontend && npm run start"
+  },
+  "author": "",
+  "license": "MIT"
+} 
